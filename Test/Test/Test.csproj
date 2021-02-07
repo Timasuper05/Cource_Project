@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48FCB044-0357-440C-9801-201DDAC259A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="VideoPage.xaml.cs">
+      <DependentUpon>VideoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomPage.xaml.cs">
+      <DependentUpon>WelcomPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LessonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LessonsPage.xaml.cs">
+      <DependentUpon>LessonsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PopupUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VideoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WelcomPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PopupUserControl.xaml.cs">
+      <DependentUpon>PopupUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\About-64px.png" />
+    <Resource Include="Accets\Home-64px.png" />
+    <Resource Include="Accets\Lessons-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\Close-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\PythonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\Images\0.jpg" />
+    <Resource Include="Accets\Images\1.jpg" />
+    <Resource Include="Accets\Images\10.jpg" />
+    <Resource Include="Accets\Images\11.jpg" />
+    <Resource Include="Accets\Images\12.jpg" />
+    <Resource Include="Accets\Images\13.jpg" />
+    <Resource Include="Accets\Images\14.jpg" />
+    <Resource Include="Accets\Images\15.jpg" />
+    <Resource Include="Accets\Images\16.jpg" />
+    <Resource Include="Accets\Images\2.jpg" />
+    <Resource Include="Accets\Images\3.jpg" />
+    <Resource Include="Accets\Images\4.jpg" />
+    <Resource Include="Accets\Images\5.jpg" />
+    <Resource Include="Accets\Images\6.jpg" />
+    <Resource Include="Accets\Images\7.jpg" />
+    <Resource Include="Accets\Images\8.jpg" />
+    <Resource Include="Accets\Images\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\Pycharm Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\ImageVideoPlayer\play-icon64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\ImageVideoPlayer\pause-icon64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Accets\ImageVideoPlayer\stop-icons64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accets\Video\[#python] Урок 0 Введение.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 1 Установка.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 10 Решение задачи %28неуникальные элементы%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 11 Поиск медианы %28задача%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 12 Окрестности Мура %28задача%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 13 Базовые типы %28Словари%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 14 Базовые типы %28Кортежи%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 15 Функции.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 16 Переменное количество аргументов в функции %28args, kwargs%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 2 Выбор IDE.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 3 Базовые типы %28предисловие%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 4 Базовые типы %28Числа%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 5 Базовые типы %28Строки%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 6 Базовые типы Строки %28продолжение%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 7 Изменяемые и неизменяемые объекты.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 8 Базовые типы %28Списки%29.mp4" />
+    <Content Include="Accets\Video\[#python] Урок 9 Циклы и условия.mp4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
